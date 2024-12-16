@@ -829,7 +829,7 @@
         <p class="subtitle"></p>
         <h2 class="uk-heading-small uk-text-center script-font">ALBUM ẢNH</h2>
       </div>
-      <div class="album container">
+      <div class="album container hide-on-mobile">
         <div class="album-item" data-aos="fade-up" data-aos-duration="1000">
           <a data-fancybox="gallery" href="img/6.jpg">
             <img src="img/6.jpg" alt="" loading="lazy" />
@@ -867,6 +867,58 @@
           </a>
         </div>
         <div class="album-item" data-aos="fade-up" data-aos-duration="2000">
+          <a data-fancybox="gallery" href="./img/8.jpg">
+            <img src="./img/8.jpg" alt="" loading="lazy" />
+          </a>
+        </div>
+        <div
+          class="album-item hide-on-mobile"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
+          <a data-fancybox="gallery" href="./img/1.jpg">
+            <img src="./img/1.jpg" alt="" loading="lazy" />
+          </a>
+        </div>
+      </div>
+      <div class="album container hide-on-pc">
+        <div class="album-item" data-aos="zoom-in-right" data-aos-duration="1000">
+          <a data-fancybox="gallery" href="img/6.jpg">
+            <img src="img/6.jpg" alt="" loading="lazy" />
+          </a>
+        </div>
+        <div class="album-item" data-aos="zoom-in-left" data-aos-duration="2000">
+          <a data-fancybox="gallery" href="img/10.jpg">
+            <img src="img/10.jpg" alt="" loading="lazy" />
+          </a>
+        </div>
+        <div class="album-item" data-aos="zoom-in-right" data-aos-duration="3000">
+          <a data-fancybox="gallery" href="img/9.jpg">
+            <img src="img/9.jpg" alt="" loading="lazy" />
+          </a>
+        </div>
+
+        <div class="album-item" data-aos="zoom-in-left" data-aos-duration="1000">
+          <a data-fancybox="gallery" href="img/4.jpg">
+            <img src="img/4.jpg" alt="" loading="lazy" />
+          </a>
+        </div>
+        <div class="album-item" data-aos="zoom-in-right" data-aos-duration="2000">
+          <a data-fancybox="gallery" href="img/3.jpg">
+            <img src="img/3.jpg" alt="" loading="lazy" />
+          </a>
+        </div>
+        <div class="album-item" data-aos="zoom-in-left" data-aos-duration="3000">
+          <a data-fancybox="gallery" href="img/7.jpg">
+            <img src="img/7.jpg" alt="" loading="lazy" />
+          </a>
+        </div>
+        <div class="album-item" data-aos="zoom-in-right" data-aos-duration="1000">
+          <a data-fancybox="gallery" href="./img/2.jpg">
+            <img src="./img/2.jpg" alt="" loading="lazy" />
+          </a>
+        </div>
+        <div class="album-item" data-aos="zoom-in-left" data-aos-duration="2000">
           <a data-fancybox="gallery" href="./img/8.jpg">
             <img src="./img/8.jpg" alt="" loading="lazy" />
           </a>
@@ -1400,7 +1452,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const flowerContainer = document.getElementById("falling-flowers");
-        const flowerCount = 30; // Số lượng cánh hoa
+        const flowerCount = 15; // Số lượng cánh hoa
 
         for (let i = 0; i < flowerCount; i++) {
           const flower = document.createElement("div");
@@ -1409,8 +1461,8 @@
           // Tạo vị trí và tốc độ rơi ngẫu nhiên
           const size = Math.random() * 25 + 10; // Kích thước cánh hoa
           const left = Math.random() * 100; // Vị trí ngang
-          const duration = Math.random() * 5 + 5; // Thời gian rơi
-          const delay = Math.random() * -5; // Độ trễ
+          const duration = Math.random() * 9 + 9; // Thời gian rơi
+          const delay = Math.random() * -7; // Độ trễ
 
           flower.style.width = `${size}px`;
           flower.style.height = `${size}px`;
