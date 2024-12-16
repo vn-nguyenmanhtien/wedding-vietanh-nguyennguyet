@@ -443,6 +443,7 @@ body {
     align-items: center;
     gap: 20px;
     font-size: 16px;
+    margin-top: 20px;
 }
 .banner-date .date2 {
     font-size: 25px;
@@ -457,7 +458,7 @@ body {
     margin-top: 12px;
 }
 .banner-date .date1, .banner-date .date3 {
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
     padding: 4px 0;
     border-top: 1px solid var(--second-color);
@@ -466,7 +467,7 @@ body {
 
 .banner-location {
     color: var(--text-white);
-
+    width: 300px;
 }
 .banner_location_name {
     font-size: 24px;
@@ -792,6 +793,7 @@ body {
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    object-position: 55% 42%;
 }
 .thankyou-title {
     font-size: 64px;
