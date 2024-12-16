@@ -216,6 +216,40 @@
         color: #fff;
         text-decoration: none;
       }
+
+
+      #falling-flowers {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        overflow: hidden;
+        z-index: 9999;
+      }
+
+      .flower {
+        position: absolute;
+        top: -10px;
+        width: 20px;
+        height: 20px;
+        background-image: url("./img/canh-hoa.svg"); /* Thay bằng đường dẫn tới ảnh cánh hoa */
+        background-size: cover;
+        /* opacity: 0.8; */
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(0) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0.3;
+        }
+      }
     </style>
     <style id="global-styles-inline-css">
       :root {
@@ -620,6 +654,8 @@
   <body
     class="thiepcuoi-template thiepcuoi-template-templates thiepcuoi-template-xanhluxury thiepcuoi-template-templatesxanhluxury-php single single-thiepcuoi postid-1957"
   >
+    <div id="falling-flowers"></div>
+
     <!-- PRELOAD -->
     <div
       class="loader uk-overlay uk-position-cover uk-background-muted uk-position-z-index uk-flex uk-flex-center uk-flex-middle"
@@ -708,7 +744,7 @@
                 Tại tư gia nhà gái
               </h4>
               <p class="invitation_address banner_location_adress">
-                Xóm Đồi, Thôn Phù Yên, Xã Trường Yên, 
+                Xóm Đồi, Thôn Phù Yên, Xã Trường Yên,
               </p>
               <p>Huyện Chương Mỹ, Thành phố Hà Nội</p>
             </div>
@@ -788,59 +824,58 @@
 
     <!-- END TIMELINE -->
     <!-- ALBUM -->
-    <section
-      id="album"
-      class="uk-section"
-      data-aos="fade-up"
-      data-aos-duration="3000"
-    >
+    <section id="album" class="uk-section">
       <div class="section-heading">
         <p class="subtitle"></p>
         <h2 class="uk-heading-small uk-text-center script-font">ALBUM ẢNH</h2>
       </div>
       <div class="album container">
-        <div class="album-item">
+        <div class="album-item" data-aos="fade-up" data-aos-duration="1000">
           <a data-fancybox="gallery" href="img/6.jpg">
             <img src="img/6.jpg" alt="" loading="lazy" />
           </a>
         </div>
-        <div class="album-item">
+        <div class="album-item" data-aos="fade-up" data-aos-duration="2000">
           <a data-fancybox="gallery" href="img/10.jpg">
             <img src="img/10.jpg" alt="" loading="lazy" />
           </a>
         </div>
-        <div class="album-item">
+        <div class="album-item" data-aos="fade-up" data-aos-duration="3000">
           <a data-fancybox="gallery" href="img/9.jpg">
             <img src="img/9.jpg" alt="" loading="lazy" />
           </a>
         </div>
 
-        <div class="album-item">
+        <div class="album-item" data-aos="fade-up" data-aos-duration="1000">
           <a data-fancybox="gallery" href="img/4.jpg">
             <img src="img/4.jpg" alt="" loading="lazy" />
           </a>
         </div>
-        <div class="album-item">
+        <div class="album-item" data-aos="fade-up" data-aos-duration="2000">
           <a data-fancybox="gallery" href="img/3.jpg">
             <img src="img/3.jpg" alt="" loading="lazy" />
           </a>
         </div>
-        <div class="album-item">
+        <div class="album-item" data-aos="fade-up" data-aos-duration="3000">
           <a data-fancybox="gallery" href="img/7.jpg">
             <img src="img/7.jpg" alt="" loading="lazy" />
           </a>
         </div>
-        <div class="album-item">
+        <div class="album-item" data-aos="fade-up" data-aos-duration="1000">
           <a data-fancybox="gallery" href="./img/2.jpg">
             <img src="./img/2.jpg" alt="" loading="lazy" />
           </a>
         </div>
-        <div class="album-item">
+        <div class="album-item" data-aos="fade-up" data-aos-duration="2000">
           <a data-fancybox="gallery" href="./img/8.jpg">
             <img src="./img/8.jpg" alt="" loading="lazy" />
           </a>
         </div>
-        <div class="album-item hide-on-mobile">
+        <div
+          class="album-item hide-on-mobile"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <a data-fancybox="gallery" href="./img/1.jpg">
             <img src="./img/1.jpg" alt="" loading="lazy" />
           </a>
@@ -1028,7 +1063,11 @@
     <section
       id="message"
       class="section-message uk-background-cover uk-section"
-      style="background-image: url(img/6.jpg); display: block; background-position: 80% 20%;"
+      style="
+        background-image: url(img/6.jpg);
+        display: block;
+        background-position: 80% 20%;
+      "
     >
       <div class="uk-position-cover uk-overlay uk-overlay-primary"></div>
       <div
@@ -1111,7 +1150,10 @@
               <label class="radio-container"
                 >THÀNH HÔN NHÀ TRAI
                 <span class="tooltip">
-                  <p>Đội 8, Thôn Tiên Lữ, Xã Tiên Phương, Huyện Chương Mỹ, Thành phố Hà Nội</p>
+                  <p>
+                    Đội 8, Thôn Tiên Lữ, Xã Tiên Phương, Huyện Chương Mỹ, Thành
+                    phố Hà Nội
+                  </p>
                 </span>
                 <input
                   type="radio"
@@ -1126,7 +1168,8 @@
                 >THÀNH HÔN NHÀ GÁI
                 <span class="tooltip">
                   <p>
-                    Xóm Đồi, Thôn Phù Yên, Xã Trường Yên, Huyện Chương Mỹ, Thành phố Hà Nội
+                    Xóm Đồi, Thôn Phù Yên, Xã Trường Yên, Huyện Chương Mỹ, Thành
+                    phố Hà Nội
                   </p>
                 </span>
                 <input
@@ -1185,6 +1228,8 @@
     <script>
       //XỬ LÝ FORM
       $(document).ready(function () {
+        $("#audio").trigger("click");
+
         $(".message-form").fadeOut(300);
         $("#form").on("submit", function (e) {
           e.preventDefault();
@@ -1312,12 +1357,7 @@
       fetchData();
     </script>
     <!-- AUDIO -->
-    <audio
-      src="https://hchiwedding.com/wp-content/uploads/2024/10/BeautifulInWhite-ShaneFilan-524801-13.mp3"
-      controls
-      autoplay
-      id="audio"
-    ></audio>
+    <audio src="./Until_I_Found_You.mp3" controls autoplay id="audio"></audio>
     <!-- END AUDIO -->
     <!-- FOOTER -->
     <footer>
@@ -1357,7 +1397,31 @@
       </svg>
     </button>
     <!-- END FOOTER -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const flowerContainer = document.getElementById("falling-flowers");
+        const flowerCount = 30; // Số lượng cánh hoa
 
+        for (let i = 0; i < flowerCount; i++) {
+          const flower = document.createElement("div");
+          flower.classList.add("flower");
+
+          // Tạo vị trí và tốc độ rơi ngẫu nhiên
+          const size = Math.random() * 25 + 10; // Kích thước cánh hoa
+          const left = Math.random() * 100; // Vị trí ngang
+          const duration = Math.random() * 5 + 5; // Thời gian rơi
+          const delay = Math.random() * -5; // Độ trễ
+
+          flower.style.width = `${size}px`;
+          flower.style.height = `${size}px`;
+          flower.style.left = `${left}vw`;
+          flower.style.animationDuration = `${duration}s`;
+          flower.style.animationDelay = `${delay}s`;
+
+          flowerContainer.appendChild(flower);
+        }
+      });
+    </script>
     <script src="./js/uikit.min.js?ver=1.0.0" id="uikit js-js"></script>
     <script src="./js/uikit-icons.min.js?ver=1.0.0" id="uikit icon-js"></script>
     <script src="./js/preload.js" id="preload js-js"></script>
