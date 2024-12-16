@@ -216,40 +216,6 @@
         color: #fff;
         text-decoration: none;
       }
-
-
-      #falling-flowers {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        overflow: hidden;
-        z-index: 9999;
-      }
-
-      .flower {
-        position: absolute;
-        top: -10px;
-        width: 20px;
-        height: 20px;
-        background-image: url("./img/heart.png"); /* Thay bằng đường dẫn tới ảnh cánh hoa */
-        background-size: cover;
-        /* opacity: 0.8; */
-        animation: fall linear infinite;
-      }
-
-      @keyframes fall {
-        0% {
-          transform: translateY(0) rotate(0deg);
-          opacity: 1;
-        }
-        100% {
-          transform: translateY(100vh) rotate(0deg);
-          opacity: 0.3;
-        }
-      }
     </style>
     <style id="global-styles-inline-css">
       :root {
@@ -654,8 +620,6 @@
   <body
     class="thiepcuoi-template thiepcuoi-template-templates thiepcuoi-template-xanhluxury thiepcuoi-template-templatesxanhluxury-php single single-thiepcuoi postid-1957"
   >
-    <div id="falling-flowers"></div>
-
     <!-- PRELOAD -->
     <!-- <div
       class="loder uk-overlay uk-position-cover uk-background-muted uk-position-z-index uk-flex uk-flex-center uk-flex-middle"
@@ -1449,31 +1413,6 @@
       </svg>
     </button>
     <!-- END FOOTER -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const flowerContainer = document.getElementById("falling-flowers");
-        const flowerCount = 6; // Số lượng cánh hoa
-
-        for (let i = 0; i < flowerCount; i++) {
-          const flower = document.createElement("div");
-          flower.classList.add("flower");
-
-          // Tạo vị trí và tốc độ rơi ngẫu nhiên
-          const size = Math.random() * 25 + 10; // Kích thước cánh hoa
-          const left = Math.random() * 100; // Vị trí ngang
-          const duration = Math.random() * 9 + 9; // Thời gian rơi
-          const delay = Math.random() * 0; // Độ trễ
-
-          flower.style.width = `${size}px`;
-          flower.style.height = `${size}px`;
-          flower.style.left = `${left}vw`;
-          flower.style.animationDuration = `${duration}s`;
-          flower.style.animationDelay = `${delay}s`;
-
-          flowerContainer.appendChild(flower);
-        }
-      });
-    </script>
     <script src="./js/uikit.min.js?ver=1.0.0" id="uikit js-js"></script>
     <script src="./js/uikit-icons.min.js?ver=1.0.0" id="uikit icon-js"></script>
     <script src="./js/preload.js" id="preload js-js"></script>
